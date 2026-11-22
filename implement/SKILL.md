@@ -13,7 +13,7 @@ Then build each unit in order:
 
 1. Where there is a clear seam, write a failing test that checks behaviour a user of the code can observe. Write it by **Tests** below.
 2. Fill in the sketch until the check passes.
-3. Run the typechecker and the unit's tests. Do not start the next unit with anything failing.
+3. Run the typechecker and the unit's tests. Do not start the next unit with anything failing. For each condition, guard, or branch the unit adds, remove or invert it once and confirm a test fails, then restore it. Add the missing test when none fails.
 4. Commit the unit with a message written per the `describe` skill (title alone is fine for a small unit), then tick it in the sketch. Unit commits don't wait for approval.
 
 **Tests.** Write every unit test, and any other test, by the `tests` skill (`~/.agents/skills/tests/SKILL.md`).
