@@ -40,7 +40,7 @@ The manual-validation child exercises the changed behavior through its normal en
 
 Every finding that starts a repair cycle, and every gate failure, goes in the delivery ledger. Log each one with `python3 <this skill>/scripts/ledger.py add`. Give it the repository, task slug, round, source (the reviewer, `gate`, or `ci`), severity, a kebab-case cause tag naming the root cause (for example `untested-guard`, `spec-gap-empty-state`, `lint-not-run`), a one-line summary, and the prevention that would have stopped it earlier. Use one of `none`, `lint`, `ci`, `repo-instructions`, or `skill:<name>`. Reuse an existing tag when the cause matches; `ledger.py tags` lists them.
 
-Before returning, run `ledger.py report`. For each recurring cause it flags, include a concrete prevention proposal in the return: the lint rule or check to add to the repository, or the line to add to the named skill. Propose it; do not edit skills or repository tooling outside the task's scope.
+Before returning, run `ledger.py report` and bring `LESSONS.md` at the root of the skills checkout (next to this skill's folder) up to date. It is the shared, cross-project record of recurring causes. For each recurring cause the report flags, add this run's findings as evidence under its entry, or create the entry if it has none. Then set or sharpen its proposal: the lint rule or check to add to the repository, or the line to add to the named skill. Leave the status of new and existing proposals as they are. In the return, name the entries you added or changed. `LESSONS.md` is the only file outside the task you may edit: propose the skill or tooling changes there, and make none of them.
 
 ## Deliver and resume
 
