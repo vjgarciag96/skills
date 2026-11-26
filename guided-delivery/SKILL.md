@@ -15,6 +15,6 @@ Run these stages yourself in this conversation. Do not delegate them, and do not
 
 ## Autonomously
 
-Follow `autonomous-delivery` from its **Implement** step onward, with the accepted `agreement.md` and `sketch.md` as the approved artifacts: its dispatch rules, implement, gate, review and validation, triage, re-review, ledger (its `scripts/ledger.py`) and the shared `LESSONS.md` it keeps up to date, and delivery to a merged PR. When you hand back the merged PR, tell the user in a line or two which lessons entries this run added or changed.
+Follow `autonomous-delivery` from its **Implement** step onward, with the accepted `agreement.md` and `sketch.md` as the approved artifacts: its dispatch rules, implement, gate, review and validation, triage, re-review, ledger (its `scripts/ledger.py`) and the lessons run file it writes, and delivery to a merged PR. When you hand back the merged PR, tell the user in a line or two which causes this run logged in its lessons file.
 
 The user stays the owner of the agreement and the sketch. When a change or a finding would reopen a decision in either, do not resolve it as lead: stop that work, bring the decision back to the user with your recommendation, update the artifact once they answer, and resume. Every other decision is the lead's, as in `autonomous-delivery`.
