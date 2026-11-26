@@ -36,6 +36,8 @@ Same title and the same two paragraphs, since a squash merge turns the PR into a
 
 If the repo has a PR template, fill the template with this content.
 
+A visible change also gets an `## Evidence` section from the `evidence` skill after review passes. Keep it when rewriting the description.
+
 ## Before handing it over
 
 - Reread against the final diff, not the first commit. After review rounds the description often describes code that no longer exists.

@@ -49,8 +49,9 @@ For an existing PR, start from its current head and recover the acceptance crite
 Delivery ends at a merged PR, not at a reviewed branch. Once review and validation cover the candidate commit:
 
 1. Push the delivery branch and open the PR, or update the existing one. Use `describe` for its title and description, and record the reviewed commit and validation evidence in it. In T3, link each PR you create, take over, or push to on the next call.
-2. Enable auto-merge pinned to the reviewed head: `gh pr merge <pr> --auto --squash --match-head-commit <sha>`. Squash by default. Use `--rebase` instead when every commit on the branch is clean and meaningful on its own, and the repository allows it. Use the repository's prescribed method when it has one. If the repository does not allow auto-merge, merge directly with the same expected head once the required checks pass. If the request or repository limits delivery to a draft or an unmerged PR, stop after step 1 and say so.
-3. Watch the PR until it merges, following the host's watch instructions.
+2. Run `evidence` on the reviewed head and add its section to the description. When the request asks to see evidence before merging, stop here and wait for the user's approval.
+3. Enable auto-merge pinned to the reviewed head: `gh pr merge <pr> --auto --squash --match-head-commit <sha>`. Squash by default. Use `--rebase` instead when every commit on the branch is clean and meaningful on its own, and the repository allows it. Use the repository's prescribed method when it has one. If the repository does not allow auto-merge, merge directly with the same expected head once the required checks pass. If the request or repository limits delivery to a draft or an unmerged PR, stop after step 2 and say so.
+4. Watch the PR until it merges, following the host's watch instructions.
 
 On wake, read the current head, checks, and review state. If the head moved, inspect the new commits, confirm the scope still applies, and base any repair on the new head. Delegate diagnosis of failures or review feedback as needed, fix and revalidate the affected behavior, push the repair, and re-enable auto-merge pinned to the new head. Log the CI failure or review comment in the ledger like any other repair cycle. If the push is rejected because the head moved again, inspect the new head before retrying.
 
